@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="robots" content="noindex,nofllow" />
+	<title>联系人列表</title>
+	<link rel="stylesheet" type="text/css" href="./stylesheets/main.css">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    {% if edit %}  
+		<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/list.js"></script>
+	{% endif %}
+</head>
+<body>
+	<div id="container">
+		<div class="formbox">
+			<h1>
+				2014年赤峰市公务员（参公单位）初任培训一期通讯录
+			</h1>
+			<p class="desc" style="margin-bottom: 5px;">本通讯录自愿填写，本人信息有误请联系班长，添加请猛击<a href="/">这里</a>，下载请猛击<a href="/download">这里</a>(可以用记事本或excel打开)</p>
+			{% for phone in phones %}  
+			   <div class="phone_feild">
+			  	<span class="name">{{phone.name}}</span>
+			  	<span class="phone">{{phone.phone}}</span>
+			  	<span class="adress"> {{phone.department}}</span>
+		        {% if edit %}  
+		        <a href="javascript:void(0)" data-key="{{phone.key}}">删除</a>
+			  	{% endif %}
+			  </div>
+			{% endfor %}  
+		</div>
+        <div class="m_footer">
+        	<div class="m_footer_message">
+        		技术支持: <a href="https://github.com/binbin">https://github.com/binbin</a>
+        	</div>
+        </div>
+	</div>
+</body>
+</html>

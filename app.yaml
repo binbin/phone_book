@@ -1,0 +1,27 @@
+application: cf-civil-servant
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /stylesheets  
+  static_dir: stylesheets  
+
+- url: /js  
+  static_dir: js
+
+- url: /resources  
+  static_dir: resources   
+
+- url: /images
+  static_dir: images
+  
+- url: /static
+  static_dir: static
+
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+
+- url: /.*
+  script: index.py

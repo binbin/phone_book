@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="robots" content="noindex,nofllow" />
+	<title>添加联系人</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+	<link rel="shortcut icon" href="/static/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/static/favicon.ico" type="image/vnd.microsoft.icon">
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div class="formbox">
+		  <form id="form1" action="list" method="post">
+			<h1>
+				2014年赤峰市公务员（参公单位）初任培训一期通讯录
+			</h1>
+			<p class="desc">本通讯录自愿填写，查看通讯录请猛击<a href="/list">这里</a>，下载请猛击<a href="/download">这里</a>(可以用记事本或excel打开)</p>
+			<div class="feild">
+				<p class="title">姓名</p>
+				<p class="sub_title">请填写您的名字</p>
+				<p class="inputbox">
+					<input type="text" name="name">
+					<!--<span class="error">
+						错误信息
+					</span>-->
+				</p>
+			</div>
+			<div class="feild">
+				<p class="title">手机</p>
+				<p class="sub_title">填写您常用的手机号码</p>
+				<p class="inputbox">
+					<input type="text" name="phone">
+				</p>
+			</div>
+			<div class="feild">
+				<p class="title">工作单位</p>
+				<p class="sub_title">填写您的工作单位,如:松山区人事局</p>
+				<p class="inputbox">
+					<input type="text" name="department">
+				</p>
+			</div>
+         </form>
+		</div>
+		<div class="submit_box">
+				<button type="button" id="sub">提交</button>
+		</div>
+        <div class="m_footer">
+        	<div class="m_footer_message">
+        		技术支持: <a href="https://github.com/binbin">https://github.com/binbin</a>
+        	</div>
+        </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+@charset "utf-8";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography/links/unstyled-link";
+
+
+html,body{
+  font-size:12px;
+  font-family: "Microsoft YaHei","微软雅黑","SimHei","黑体";
+	background-color:rgb(192,192,192);
+  height:100%;
+  background-color: #F1F1F1;
+  background-image: -webkit-linear-gradient(top,#FFFFFF,#F1F1F1);
+}
+#container{
+  padding-top: 30px;
+  position:relative;
+  font-size:12px;
+  min-height:100%;
+  height:auto !important;
+  height:100%;
+  position:relative;
+  margin: 0 auto;
+}
+@mixin width{
+	 width: 440px;
+	 margin:{
+	  left:auto;
+      right:auto;
+	 }
+}
+.formbox{
+    @include width;
+    margin:{
+     top:10px;
+    }
+    padding:{
+      top:20px;
+      left:20px;
+      right:20px;
+      bottom:20px;
+    }
+    background:#fff;
+	border:{
+	  left:1px solid #D2D5D8;
+	  top:1px solid #D2D5D8;
+	  right:1px solid #D2D5D8;
+	}
+	h1{
+	  color:#217346;
+	  font-size:18px;
+	  font-weight:bold;
+	  text-align:left;
+	  padding-bottom:20px;
+	  border-bottom: 1px solid #D2D5D8;
+	}
+	p.desc{
+	  line-height:24px;
+	  color:#666;
+	  margin-bottom:20px;
+	}
+	div.feild{
+	  padding:{
+	    left:5px;
+	    bottom:10px;
+	  }
+	}
+	p.title,p.sub_title{
+	  line-height:18px;
+	}
+	p.title{
+	  font-weight:bold;
+	}
+	p.sub_title{
+	  color:#666;
+	}
+	p.inputbox{
+	  padding-bottom:5px;
+	  input{
+	    padding:{
+	      left:5px;
+	      top:2px;
+	      bottom:2px;
+	    }
+	    border: 1px solid #999;
+	    margin:{
+	     top:5px;
+
+	    }
+	    width:300px;
+	  }
+	  span,label.error{
+	    display:block;
+	    color:red;
+	  }
+	}
+}
+div.submit_box{
+	  @include width;
+      padding:20px;
+      background:#F1F1F1;
+      border:{
+       left:1px solid #D2D5D8;
+       right:1px solid #D2D5D8;
+      }
+      button{
+       background:#217346;
+       border: solid 1px #217346;
+       color:#fff;
+       line-height:30px;
+       width:80px;
+       font-weight:bold;
+       font-size:14px;
+       cursor:pointer;
+      }
+      button:hover{
+        border-color:#439467;
+        background-color:#86bfa0;
+      }
+} 
+div.m_footer{
+	@include width;
+	padding:{
+	 left:20px;
+	 right:20px;
+	};
+	background:#217346;
+    border: solid 1px #217346;
+    .m_footer_message{
+      color:#fff;
+      height:20px;
+      line-height:20px;
+      a{
+        color:#fff;
+      }
+    }
+    margin-bottom:50px;
+}
+
+div.phone_feild{
+	padding:{
+	  top:5px;
+	}
+	span{
+	 @include inline-block;
+	}
+	span.name{
+	 width:70px;
+	 @include inline-block;
+	}
+	span.phone{
+	 width:90px;
+	 @include inline-block;
+	}
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<title>通讯录</title>
+</head>
+<body>
+	{% for phone in phones %}  
+	  <p>
+	  	{{phone.name}} &nbsp;&nbsp;&nbsp; {{phone.phone}} &nbsp;&nbsp;&nbsp; {{phone.department}}&nbsp;&nbsp;&nbsp; 
+        {% if edit %}  
+        <a href="/delete?key={{phone.key}}">删除</a>
+	  	{% endif %}
+	  </p>
+	{% endfor %}  
+</body>
+</html>
